@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymuosly Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
+<body>
+    <div class="App">
+        <div class="mobile-container">
+            <div id="joinChatContainer" class="joinChatContainer">
+                <h3>Join A Chat</h3>
+                <input type="text" id="usernameInput" placeholder="John...">
+                <input type="text" id="roomInput" placeholder="Room ID...">
+                <button id="joinRoomButton">Join A Room</button>
+            </div>
+
+            <div id="chatWindow" class="chat-window hide">
+                <div class="chat-header">
+                    <span class="back-icon" style="color: black;">&#8592;</span> <div class="group-info">
+                        <div class="group-avatar-placeholder"></div>
+                        <p id="groupName" class="group-name">Fun Friday Group</p>
+                    </div>
+                    <span class="menu-icon">&#128737;</span> </div>
+
+                <div class="chat-body">
+                    <div class="date-separator">8/20/2020</div>
+                    <div id="messageContainer" class="message-container">
+                        </div>
+                </div>
+
+                <div class="chat-footer">
+                    <input type="text" id="currentMessageInput" placeholder="Type a message ...">
+                    <span class="icon">&#128247;</span> <span class="icon">&#128206;</span> <button id="sendMessageButton" class="send-button">&#9658;</button> </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
